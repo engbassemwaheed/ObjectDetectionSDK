@@ -2,6 +2,7 @@ package com.waheed.bassem.objdet.input;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -15,6 +16,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.core.content.FileProvider;
 import androidx.exifinterface.media.ExifInterface;
 
+import com.waheed.bassem.objdet.BuildConfig;
 import com.waheed.bassem.objdet.utils.ErrorCode;
 import com.waheed.bassem.objdet.utils.ImageEditor;
 
@@ -66,7 +68,9 @@ public class CaptureImageHandler {
     private Intent buildCameraIntent(Activity activity) throws IOException {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         File file = createImageFile(activity);
-        Uri photoURI = FileProvider.getUriForFile(activity, "com.waheed.bassem.objdet.fileprovider", file);
+
+
+        Uri photoURI = FileProvider.getUriForFile(activity,  activity.getPackageName() + ".fileprovider", file);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
         return intent;
     }
