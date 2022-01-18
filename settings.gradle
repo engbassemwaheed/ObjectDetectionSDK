@@ -1,0 +1,3 @@
+include ':ObjDet'
+include ':app'
+rootProject.name = "Object Detection SDK"

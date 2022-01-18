@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="rectangle_color">#FFEB3B</color>
+    <color name="capture_button_color">#3F51B5</color>
+    <color name="loading_color">#813F51B5</color>
+
+</resources>

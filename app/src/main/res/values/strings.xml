@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Object Detection SDK</string>
+    <string name="start_ocr">Start Detection</string>
+</resources>
